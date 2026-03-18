@@ -12,29 +12,12 @@ Expected front matter fields per paper:
 {%- endcomment -%}
 
 {%- if site.papers -%}
-{%- assign preprints = site.papers | where: 'type', 'preprint' | sort: 'year' | reverse -%}
-{%- assign selected = site.papers | where: 'type', 'selected' | sort: 'year' | reverse -%}
+{%- assign all_papers = site.papers | sort: 'year' | reverse -%}
 
-{%- if preprints and preprints.size > 0 -%}
-  <h6 class="docs-header">Recent Preprints</h6>
-  <ul>
-  {%- for p in preprints -%}
-    <li>
-      <i>{{ p.title }}</i><br>
-      {{ p.authors }}.<br>
-      {%- if p.venue -%}<b>{{ p.venue }}&nbsp;</b> {%- endif -%}{{ p.year }}&nbsp;
-      {%- if p.paper_url -%} <a href="{{ p.paper_url }}" target="_blank">[{{ p.paper_label | default: 'paper' }}]</a>&nbsp;{%- endif -%}
-      {%- if p.code_url -%} <a href="{{ p.code_url }}" target="_blank">[Code]</a>&nbsp;{%- endif -%}
-      {%- if p.award -%} <strong>{{ p.award }}</strong>{%- endif -%}
-    </li>
-  {%- endfor -%}
-  </ul>
-{%- endif -%}
-
-{%- if selected and selected.size > 0 -%}
+{%- if all_papers.size > 0 -%}
   <h6 class="docs-header">Selected Publications</h6>
   <ul>
-  {%- for p in selected -%}
+  {%- for p in all_papers -%}
     <li>
       <i>{{ p.title }}</i><br>
       {{ p.authors }}.<br>
