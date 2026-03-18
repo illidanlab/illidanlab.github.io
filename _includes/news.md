@@ -1,3 +1,4 @@
+- [2026] Our paper on <a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00223-0" target="_blank">deep-learning-based de novo drug discovery using transcriptional phenotypes</a> is published in Cell!
 - [2025] [Call for Paper] Please consider submitting papers to the second <a href="https://fedkdd.github.io/fedkdd2025/" target="_blank">FedKDD: International Joint Workshop on Federated Learning for Data Mining and Graph Analytics</a>, co-located with KDD'25, August 3-7th, Toronto, ON, Canada.
 - [2024] ILLIDAN Lab has moved to the <a href="https://umich.edu/" target="_blank">University of Michigan</a>! 
 - [2024] Check out our latest <a href="https://arxiv.org/abs/2405.16413" target="_blank">preprint</a> that explores how to leverage large-language models (LLMs) to help on early diagnosis of Alzheimer's. Are larger and domain fine-tuned models always better? We provided some exciting and surprising results based on our study on 2.5 million patients.
