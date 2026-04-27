@@ -1,11 +1,10 @@
-<div class="row example">
-    <div class="example-profile-wrapper">
-        <img src="{{ page.picture }}" alt="{{ page.name }}" class="picture" width="100px">
-    </div>
-    <div class="two offset-by-two column">
-        <!-- <h3> -->
-            <b><a href="mailto:{{ page.email }}">{{ page.name }}</a></b>
-            &nbsp; {{ page.title }}
-        {{ content }}
-    </div>
+<div class="team-card">
+  <img src="{{ page.picture }}" alt="{{ page.name }}" class="team-card__photo" loading="lazy">
+  <div class="team-card__info">
+    <strong><a href="mailto:{{ page.email }}">{{ page.name }}</a></strong>
+    <span>{{ page.title }}</span>
+  </div>
+  {% if content != "" and content != nil %}
+    <div class="team-card__bio">{{ content }}</div>
+  {% endif %}
 </div>

@@ -12,19 +12,21 @@ Expected front matter fields per paper:
 {%- endcomment -%}
 
 {%- if site.papers -%}
-{%- assign all_papers = site.papers | sort: 'year' | reverse -%}
+{%- assign selected = site.papers | where: "type", "selected" | sort: 'year' | reverse -%}
 
-{%- if all_papers.size > 0 -%}
-  <h6 class="docs-header">Selected Publications</h6>
-  <ul>
-  {%- for p in all_papers -%}
-    <li>
-      <i>{{ p.title }}</i><br>
-      {{ p.authors }}.<br>
-      {%- if p.venue -%}<b>{{ p.venue }}&nbsp;</b> {%- endif -%}{{ p.year }}&nbsp;
-      {%- if p.paper_url -%} <a href="{{ p.paper_url }}" target="_blank">[{{ p.paper_label | default: 'paper' }}]</a>&nbsp;{%- endif -%}
-      {%- if p.code_url -%} <a href="{{ p.code_url }}" target="_blank">[Code]</a>&nbsp;{%- endif -%}
-      {%- if p.award -%} <strong>{{ p.award }}</strong>{%- endif -%}
+{%- if selected.size > 0 -%}
+  <p class="section__label">Research Output</p>
+  <h2>Selected Publications</h2>
+  <ul class="pub-list">
+  {%- for p in selected limit: 15 -%}
+    <li class="pub-item">
+      <span class="pub-title">{{ p.title }}</span><br>
+      <span class="pub-authors">{{ p.authors }}.</span><br>
+      {%- if p.venue -%}<span class="pub-venue">{{ p.venue }}&nbsp;</span>{%- endif -%}
+      <span class="pub-year">{{ p.year }}</span>&nbsp;
+      {%- if p.paper_url -%}<a href="{{ p.paper_url }}" target="_blank">[{{ p.paper_label | default: 'paper' }}]</a>&nbsp;{%- endif -%}
+      {%- if p.code_url -%}<a href="{{ p.code_url }}" target="_blank">[code]</a>&nbsp;{%- endif -%}
+      {%- if p.award -%}<strong class="pub-award">{{ p.award }}</strong>{%- endif -%}
     </li>
   {%- endfor -%}
   </ul>

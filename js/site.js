@@ -1,94 +1,46 @@
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-  // Variables
-  var $codeSnippets = $('.code-example-body'),
-      $nav = $('.navbar'),
-      $body = $('body'),
-      $window = $(window),
-      $popoverLink = $('[data-popover]'),
-      navOffsetTop = $nav.offset().top,
-      $document = $(document),
-      entityMap = {
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': '&quot;',
-        "'": '&#39;',
-        "/": '&#x2F;'
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, null, this.getAttribute('href'));
       }
-
-  function init() {
-    $window.on('scroll', onScroll)
-    $window.on('resize', resize)
-    $popoverLink.on('click', openPopover)
-    $document.on('click', closePopover)
-    $('a[href^="#"]').on('click', smoothScroll)
-    buildSnippets();
-  }
-
-  function smoothScroll(e) {
-    e.preventDefault();
-    $(document).off("scroll");
-    var target = this.hash,
-        menu = target;
-    $target = $(target);
-    $('html, body').stop().animate({
-        'scrollTop': $target.offset().top-40
-    }, 0, 'swing', function () {
-        window.location.hash = target;
-        $(document).on("scroll", onScroll);
     });
-  }
+  });
 
-  function openPopover(e) {
-    e.preventDefault()
-    closePopover();
-    var popover = $($(this).data('popover'));
-    popover.toggleClass('open')
-    e.stopImmediatePropagation();
-  }
-
-  function closePopover(e) {
-    if($('.popover.open').length > 0) {
-      $('.popover').removeClass('open')
-    }
-  }
-
-  $("#button").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#elementtoScrollToID").offset().top
-    }, 2000);
-});
-
-  function resize() {
-    $body.removeClass('has-docked-nav')
-    navOffsetTop = $nav.offset().top
-    onScroll()
-  }
-
-  function onScroll() {
-    if(navOffsetTop < $window.scrollTop() && !$body.hasClass('has-docked-nav')) {
-      $body.addClass('has-docked-nav')
-    }
-    if(navOffsetTop > $window.scrollTop() && $body.hasClass('has-docked-nav')) {
-      $body.removeClass('has-docked-nav')
-    }
-  }
-
-  function escapeHtml(string) {
-    return String(string).replace(/[&<>"'\/]/g, function (s) {
-      return entityMap[s];
+  // Fade-in on scroll via IntersectionObserver
+  var fadeObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
     });
-  }
+  }, { threshold: 0.1 });
 
-  function buildSnippets() {
-    $codeSnippets.each(function() {
-      var newContent = escapeHtml($(this).html())
-      $(this).html(newContent)
-    })
-  }
+  document.querySelectorAll('.fade-in').forEach(function (el) {
+    fadeObserver.observe(el);
+  });
 
+  // Active nav link highlighting
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.nav-links a');
 
-  init();
+  var navObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        navLinks.forEach(function (link) {
+          link.classList.toggle('active',
+            link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -60% 0px' });
+
+  sections.forEach(function (s) { navObserver.observe(s); });
 
 });
