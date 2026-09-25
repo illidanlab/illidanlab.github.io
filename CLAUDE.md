@@ -22,7 +22,7 @@ Single-page site (`index.html`) using the `default` layout. All content renders 
 ### Jekyll Collections (configured in `_config.yml`)
 
 - **`_team/`** — Team member profiles. Each `.md` file uses front matter with `layout`, `name`, `title`, `picture`, `email`, and `category` (numeric: 0=investigator, 1=lab member, 2=lab member tier 2, 3=visitor, 8=alumni, 9=friends). Members with `year` set are filtered out of active listings.
-- **`_papers/`** — Publication entries. Front matter only (body unused): `title`, `authors`, `venue`, `year`, `paper_url`, `paper_label`, `code_url`, `award`, `type`. Rendered by `_includes/publications.html`, sorted by year descending.
+- **`_papers/`** — Publication entries. Front matter only (body unused): `title`, `authors`, `venue`, `year`, `paper_url`, `paper_label`, `code_url`, `award`, `type`, `rank`. Rendered by `_includes/publications.html`, sorted by year descending; within a year, papers with `rank` come first (ascending), unranked papers last.
 
 ### Key Includes (`_includes/`)
 

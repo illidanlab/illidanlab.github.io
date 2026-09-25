@@ -12,12 +12,14 @@ Expected front matter fields per paper:
 {%- endcomment -%}
 
 {%- if site.papers -%}
-{%- assign all_papers = site.papers | sort: 'year' | reverse -%}
+{%- assign year_groups = site.papers | group_by: 'year' | sort: 'name' | reverse -%}
 
-{%- if all_papers.size > 0 -%}
+{%- if site.papers.size > 0 -%}
   <h6 class="docs-header">Selected Publications</h6>
   <ul>
-  {%- for p in all_papers -%}
+  {%- for yg in year_groups -%}
+  {%- assign year_papers = yg.items | sort: 'rank', 'last' -%}
+  {%- for p in year_papers -%}
     <li>
       <i>{{ p.title }}</i><br>
       {{ p.authors }}.<br>
@@ -26,6 +28,7 @@ Expected front matter fields per paper:
       {%- if p.code_url -%} <a href="{{ p.code_url }}" target="_blank">[Code]</a>&nbsp;{%- endif -%}
       {%- if p.award -%} <strong>{{ p.award }}</strong>{%- endif -%}
     </li>
+  {%- endfor -%}
   {%- endfor -%}
   </ul>
 {%- endif -%}

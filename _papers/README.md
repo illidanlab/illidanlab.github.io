@@ -10,5 +10,6 @@ Front matter fields per file:
 - code_url: Link to code (optional)
 - award: Award text to display (optional)
 - type: "preprint" or "selected"
+- rank: Within-year ordering (optional; lower = higher on the page, unranked papers sort last in their year)
 
 Files are plain Markdown with only front matter; body is unused.
