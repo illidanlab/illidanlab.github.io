@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c2649">
+  <meta name="description" content="AI for drug discovery at Jiayu Zhou's ILLIDAN Lab, University of Michigan. Molecular representation learning, generative design, agentic lead optimization, and transcriptomics-guided discovery.">
+  <meta property="og:title" content="AI for Drug Discovery | Jiayu Zhou">
+  <meta property="og:description" content="Connecting molecular design with biological evidence. Explore our research and opportunities to collaborate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://illidanlab.github.io/drug-discovery/">
+  <link rel="canonical" href="https://illidanlab.github.io/drug-discovery/">
+  <title>AI for Drug Discovery | ILLIDAN Lab</title>
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <span class="identity"><a href="/">ILLIDAN Lab</a><span class="identity-divider">/</span><a href="https://jiayuzhou.github.io/" class="identity-lab">Jiayu Zhou</a></span>
+    <span class="university">University of Michigan</span>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="overview" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Machine learning × molecular discovery</p>
+        <h1 id="page-title">AI for<br>drug discovery</h1>
+        <p class="hero-subtitle">Connecting molecular design<br class="desktop-break"> with biological evidence.</p>
+        <p class="hero-intro">We develop AI that learns molecular structure, designs for multiple goals, and plans how to refine a lead—helping collaborators decide what to test next.</p>
+        <div class="hero-actions"><a class="button primary" href="#research">Explore our research <span aria-hidden="true">↘</span></a><a class="text-link" href="#collaborate">Let's collaborate <span aria-hidden="true">↗</span></a></div>
+      </div>
+
+      <figure class="hero-figure">
+        <svg class="molecular-world" viewBox="0 0 470 440" role="img" aria-labelledby="world-title world-desc">
+          <title id="world-title">Molecular structure, AI design, and biological response</title>
+          <desc id="world-desc">A conceptual molecular graph connects to a branching optimization trajectory and a gene expression signature, illustrating the connected capabilities of our research.</desc>
+          <defs>
+            <radialGradient id="world-glow"><stop stop-color="#dce8f1" stop-opacity=".88"/><stop offset="1" stop-color="#f2f2f2" stop-opacity="0"/></radialGradient>
+            <linearGradient id="world-line" x1="0" x2="1"><stop stop-color="#8fa8c0"/><stop offset="1" stop-color="#287d82"/></linearGradient>
+            <pattern id="world-grid" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".85" fill="#9cabb7" opacity=".3"/></pattern>
+          </defs>
+          <circle cx="230" cy="220" r="210" fill="url(#world-glow)"/>
+          <rect x="20" y="30" width="430" height="365" fill="url(#world-grid)"/>
+          <g fill="none" stroke="#bccbd6" stroke-width="1">
+            <ellipse cx="238" cy="218" rx="179" ry="126" transform="rotate(-25 238 218)"/>
+            <ellipse cx="238" cy="218" rx="179" ry="126" transform="rotate(36 238 218)" opacity=".5"/>
+            <path d="M95 275Q32 140 172 88M324 105Q430 151 390 285" stroke-dasharray="3 6"/>
+          </g>
+          <g fill="none" stroke="#173d74" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M153 193l38-23 39 23v45l-39 23-38-23zM160 197l31-18M222 198v34M160 233l31 19"/>
+            <path d="M230 193l39-23 39 23v45l-39 23-39-23M269 179l31 18M300 233l-31 19"/>
+            <path d="M153 193l-30-18M308 193l30-18M308 238l30 18M191 261v34M188 295l-24 16M195 298l-24 16"/>
+          </g>
+          <g font-family="Arial,sans-serif" font-size="17" font-weight="500"><text x="106" y="179" fill="#287d82">N</text><text x="335" y="179" fill="#287d82">O</text><text x="334" y="270" fill="#287d82">N</text><text x="149" y="326" fill="#287d82">O</text></g>
+          <g class="world-nodes" fill="#173d74"><circle cx="153" cy="193" r="4"/><circle cx="230" cy="193" r="4"/><circle cx="230" cy="238" r="4"/><circle cx="269" cy="170" r="4"/><circle cx="191" cy="261" r="4"/></g>
+          <g transform="translate(55 70)">
+            <rect x="0" y="0" width="136" height="64" rx="3" fill="#fafbfc" stroke="#d2dce5"/>
+            <g stroke="#a2b5c7" stroke-width="1.4" fill="none"><path d="M18 34L45 18 73 34 104 19M45 18l28 32 31-31M18 34l27 15 28-15 31 14"/></g>
+            <g fill="#173d74"><circle cx="18" cy="34" r="3"/><circle cx="45" cy="18" r="3"/><circle cx="73" cy="34" r="4"/><circle cx="104" cy="19" r="3"/></g>
+            <circle cx="104" cy="48" r="3" fill="#287d82"/>
+          </g>
+          <text x="55" y="57" class="svg-label">LEARN &amp; REPRESENT</text>
+          <g transform="translate(337 118)">
+            <rect x="0" y="0" width="86" height="97" rx="3" fill="#fafbfc" stroke="#d2dce5"/>
+            <g stroke="#d5dde4" stroke-width="1"><path d="M42 12v73"/></g>
+            <g fill="#678da8"><rect x="20" y="15" width="22" height="5"/><rect x="42" y="26" width="25" height="5"/><rect x="26" y="37" width="16" height="5"/><rect x="42" y="48" width="16" height="5"/><rect x="12" y="59" width="30" height="5"/><rect x="42" y="70" width="32" height="5"/></g>
+          </g>
+          <text x="312" y="105" class="svg-label">BIOLOGICAL RESPONSE</text>
+          <g transform="translate(269 307)">
+            <rect x="0" y="0" width="151" height="68" rx="3" fill="#fafbfc" stroke="#d2dce5"/>
+            <g fill="none" stroke="#b1c3d1" stroke-width="1.5"><path d="M16 35h34l30-19h47M50 35l30 18h47"/></g>
+            <path d="M16 35h34l30-19h47" stroke="#287d82" stroke-width="2" fill="none"/>
+            <g fill="#287d82"><circle cx="16" cy="35" r="3"/><circle cx="50" cy="35" r="3"/><circle cx="80" cy="16" r="3"/><circle cx="127" cy="16" r="4"/></g>
+            <circle cx="127" cy="53" r="3" fill="#b1c3d1"/>
+          </g>
+          <text x="269" y="397" class="svg-label">PLAN &amp; REFINE</text>
+          <g fill="#c8a950"><circle cx="74" cy="229" r="4"/><circle cx="292" cy="67" r="4"/><circle cx="230" cy="385" r="4"/></g>
+        </svg>
+        <figcaption>Molecular knowledge. Generative AI. Biological context.</figcaption>
+      </figure>
+    </section>
+
+    <nav class="section-nav" aria-label="On this page"><div class="wrap nav-inner"><a href="#overview" class="active">Overview</a><a href="#research">Research</a><a href="#discovery-loop">Discovery loop</a><a href="#publications">Publications</a><a href="#collaborate">Collaborate <span aria-hidden="true">↗</span></a></div></nav>
+
+    <section class="research-intro section wrap" id="research" aria-labelledby="research-heading">
+      <div class="section-top"><p class="eyebrow">01 / Our research</p><span class="section-note">A connected program, 2021–2026</span></div>
+      <h2 id="research-heading">Better molecular design starts<br class="desktop-break"> with connected evidence.</h2>
+      <p class="section-lead">A molecule has a structure, many competing properties, and a response that depends on its biological context. Our work connects these pieces: learning useful representations, generating candidates, planning refinements, and testing biological hypotheses with collaborators.</p>
+
+      <article class="flagship" aria-labelledby="gps-heading">
+        <div class="flagship-copy">
+          <p class="research-label"><span class="venue">Cell · 2026</span><span>Biology-guided discovery</span></p>
+          <h3 id="gps-heading">Design with the<br>disease in view.</h3>
+          <p>What if we searched for molecules by the disease-related gene expression changes we want to reverse?</p>
+          <p>Our collaborative <strong>GPS</strong> study predicts transcriptional responses from chemical structures, screens compounds, and optimizes leads. Experimental studies in <strong>liver cancer</strong> and <strong>pulmonary fibrosis</strong> connect computational design to biological evidence.</p>
+          <p class="credit">With Jing Xing, <a href="https://binchenlab.org/" target="_blank" rel="noopener noreferrer">Bin Chen</a>, and collaborators<br>Jiayu Zhou, co-corresponding author</p>
+          <div class="inline-links"><a class="text-link" href="https://doi.org/10.1016/j.cell.2026.02.016" target="_blank" rel="noopener noreferrer">Read the study <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/Bin-Chen-Lab/GPS" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <figure class="signature-figure">
+          <div class="signature-heading">A biological objective for molecular design</div>
+          <div class="signature-columns">
+            <div><span class="signature-name">Disease<br>signature</span><div class="gene-bars disease" aria-label="Illustrative disease expression signature"><i style="--w:72%;--side:start"></i><i style="--w:52%;--side:end"></i><i style="--w:91%;--side:start"></i><i style="--w:65%;--side:start"></i><i style="--w:77%;--side:end"></i><i style="--w:48%;--side:end"></i><i style="--w:59%;--side:start"></i><i style="--w:84%;--side:end"></i></div></div>
+            <span class="signature-arrow" aria-hidden="true">⇄</span>
+            <div><span class="signature-name">Candidate<br>perturbation</span><div class="gene-bars candidate" aria-label="Illustrative opposing compound perturbation signature"><i style="--w:72%;--side:end"></i><i style="--w:52%;--side:start"></i><i style="--w:91%;--side:end"></i><i style="--w:65%;--side:end"></i><i style="--w:77%;--side:start"></i><i style="--w:48%;--side:start"></i><i style="--w:59%;--side:end"></i><i style="--w:84%;--side:start"></i></div></div>
+          </div>
+          <div class="signature-legend"><span><i class="legend-blue"></i>Decreased expression</span><span><i class="legend-teal"></i>Increased expression</span></div>
+          <p class="signature-takeaway">Prioritize compounds predicted to<br><strong>oppose the disease-associated pattern.</strong></p>
+          <figcaption>Conceptual illustration, not experimental data. Predicted reversal is a prioritization signal; biological activity requires experimental validation.</figcaption>
+        </figure>
+      </article>
+
+      <div class="building-blocks-heading"><h3>The AI building blocks</h3><p>Complementary methods for different discovery questions.</p></div>
+      <div class="research-grid">
+        <article class="research-item">
+          <div class="method-top"><span class="method-number">01</span><span class="method-year">MoCL · KDD 2021</span></div>
+          <svg viewBox="0 0 360 100" class="method-visual" role="img" aria-label="Molecular graphs are mapped to a shared representation using chemical knowledge"><g fill="none" stroke="#a0b5c9" stroke-width="1.8"><path d="M20 37l19-11 20 11v23L39 71 20 60zM59 37l17-10M59 60l17 10M110 37l19-11 20 11v23l-20 11-19-11zM149 37l17-10M149 60l17 10"/><path d="M193 48h41m-5-5l5 5-5 5"/></g><g fill="#173d74"><circle cx="20" cy="37" r="3"/><circle cx="59" cy="60" r="3"/><circle cx="110" cy="37" r="3"/><circle cx="149" cy="60" r="3"/></g><g fill="#287d82"><circle cx="283" cy="38" r="5"/><circle cx="295" cy="47" r="4"/><circle cx="277" cy="53" r="4"/><circle cx="306" cy="35" r="3"/><circle cx="309" cy="58" r="3"/></g><ellipse cx="292" cy="47" rx="38" ry="28" fill="none" stroke="#c8d8de" stroke-dasharray="3 4"/></svg>
+          <h4>Learn molecular structure<br>with chemical knowledge.</h4>
+          <p>MoCL uses knowledge-aware contrastive learning to build molecular representations. Chemically informed graph transformations and similarities help models learn from unlabeled molecules.</p>
+          <p class="use-case"><strong>Useful when:</strong> property labels are limited.</p>
+          <a class="paper-link" href="https://doi.org/10.1145/3447548.3467186" target="_blank" rel="noopener noreferrer" aria-label="Read the MoCL paper">MoCL paper <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="research-item">
+          <div class="method-top"><span class="method-number">02</span><span class="method-year">MolSearch · KDD 2022</span></div>
+          <svg viewBox="0 0 360 100" class="method-visual" role="img" aria-label="A tree search explores alternative molecular modifications"><g fill="none" stroke="#bcc9d3" stroke-width="1.4"><path d="M25 51L90 24l64-12M90 24l64 27M25 51l65 27 64-27M90 78l64 14M154 12l57 12 60-8M211 24l60 23M154 51l57 23 60-27M211 74l60 17"/></g><path d="M25 51L90 24l64-12 57 12 60 23" stroke="#287d82" stroke-width="2.3" fill="none"/><g fill="#b3c3d1"><circle cx="90" cy="78" r="4"/><circle cx="154" cy="51" r="4"/><circle cx="154" cy="92" r="4"/><circle cx="211" cy="74" r="4"/><circle cx="271" cy="16" r="4"/><circle cx="271" cy="91" r="4"/></g><g fill="#287d82"><circle cx="25" cy="51" r="5"/><circle cx="90" cy="24" r="4"/><circle cx="154" cy="12" r="4"/><circle cx="211" cy="24" r="4"/><circle cx="271" cy="47" r="6"/></g><circle cx="271" cy="47" r="11" stroke="#287d82" opacity=".3" fill="none"/></svg>
+          <h4>Explore the trade-offs<br>between molecular properties.</h4>
+          <p>MolSearch starts with existing molecules and searches through chemical transformations to optimize multiple objectives. Efficient search makes broader exploration practical.</p>
+          <p class="use-case"><strong>Useful when:</strong> a lead must satisfy several goals.</p>
+          <a class="paper-link" href="https://doi.org/10.1145/3534678.3542676" target="_blank" rel="noopener noreferrer" aria-label="Read the MolSearch paper">MolSearch paper <span aria-hidden="true">↗</span></a>
+          <p class="award">Best Paper Award · KDD Health Day Track</p>
+        </article>
+        <article class="research-item">
+          <div class="method-top"><span class="method-number">03</span><span class="method-year">CoG · NeurIPS 2026, accepted</span></div>
+          <div class="progressive-visual" aria-label="Progressive generation introduces scaffold, functional groups, and property constraints in stages"><span><i></i>Scaffold</span><b aria-hidden="true">→</b><span><i></i>Groups</span><b aria-hidden="true">→</b><span><i></i>Constraints</span></div>
+          <h4>Translate a design brief<br>into progressive generation.</h4>
+          <p>Chain-of-Generation breaks a text description into ordered semantic goals, guiding molecular diffusion in stages so complex requirements can be introduced progressively.</p>
+          <p class="use-case"><strong>Useful when:</strong> structural intent matters.</p>
+          <a class="paper-link" href="https://arxiv.org/abs/2511.11894" target="_blank" rel="noopener noreferrer" aria-label="Read the Chain-of-Generation paper">Chain-of-Generation paper <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="research-item">
+          <div class="method-top"><span class="method-number">04</span><span class="method-year">TRACE · KDD 2026</span></div>
+          <svg viewBox="0 0 360 100" class="method-visual" role="img" aria-label="An agent plans a sequence of optimization tools and evaluates the resulting candidates"><g fill="none" stroke="#a0b5c9" stroke-width="1.4"><path d="M45 50h42m102 0h37m54 0h30M117 31V13h137v18" stroke-dasharray="3 4"/></g><rect x="88" y="29" width="100" height="42" rx="3" fill="#e8eef3" stroke="#a9becd"/><text x="138" y="54" text-anchor="middle" class="svg-label">AI PLANNER</text><g fill="#287d82"><circle cx="30" cy="50" r="9" fill="none" stroke="#287d82" stroke-width="1.7"/><circle cx="248" cy="50" r="10" fill="none" stroke="#287d82" stroke-width="1.7"/><circle cx="324" cy="50" r="5"/></g><path d="M21 50h18m209-9v18m-9-9h18" stroke="#287d82" stroke-width="1.3"/></svg>
+          <h4>Plan which optimization<br>tool to use next.</h4>
+          <p>TRACE treats tool selection as a sequence of decisions. An LLM-based agent considers how each refinement affects later steps while retaining similarity to the original lead.</p>
+          <p class="use-case"><strong>Useful when:</strong> good local edits need a longer plan.</p>
+          <a class="paper-link" href="https://doi.org/10.1145/3770855.3819017" target="_blank" rel="noopener noreferrer" aria-label="Read the TRACE agentic tool planning paper">Agentic tool planning paper <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <p class="research-connection">Together, these studies connect <strong>molecular knowledge → controlled design → sequential refinement → biological evaluation.</strong> They are complementary research methods, with opportunities to integrate them in new collaborations.</p>
+      <p class="research-connection partner-note">Much of this program grew from a long-standing collaboration with the <a href="https://binchenlab.org/" target="_blank" rel="noopener noreferrer">Bin Chen Lab</a> at Michigan State University, whose expertise in transcriptomics-based drug discovery connects our methods to biology and experimental validation.</p>
+    </section>
+
+    <section class="loop-section" id="discovery-loop" aria-labelledby="loop-heading"><div class="wrap section">
+      <div class="section-top"><p class="eyebrow">02 / The next direction</p><span class="section-note">An AI–experiment collaboration vision</span></div>
+      <h2 id="loop-heading">Learn from the next experiment.</h2>
+      <p class="section-lead">More measurements help most when they answer the right questions. We want to connect molecular AI with experimental partners in a loop that uses both promising and unsuccessful outcomes to guide the next round.</p>
+
+      <div class="loop-board">
+        <div class="loop-board-top"><span class="loop-caption"><i aria-hidden="true"></i> Explore the discovery cycle</span><button id="play-loop" class="play-button" type="button" aria-pressed="false"><span aria-hidden="true">▶</span> Play the loop</button></div>
+        <div class="loop-layout">
+          <div class="loop-stages" role="group" aria-label="Choose a discovery stage">
+            <button class="stage-button selected" data-stage="0" type="button" aria-pressed="true"><span class="stage-index">01</span><span><strong>Design</strong><small>Propose molecular candidates</small></span><span class="stage-arrow" aria-hidden="true">↗</span></button>
+            <button class="stage-button" data-stage="1" type="button" aria-pressed="false"><span class="stage-index">02</span><span><strong>Assess</strong><small>Predict, compare, prioritize</small></span><span class="stage-arrow" aria-hidden="true">↗</span></button>
+            <button class="stage-button" data-stage="2" type="button" aria-pressed="false"><span class="stage-index">03</span><span><strong>Test</strong><small>Measure in biological systems</small></span><span class="stage-arrow" aria-hidden="true">↗</span></button>
+            <button class="stage-button" data-stage="3" type="button" aria-pressed="false"><span class="stage-index">04</span><span><strong>Learn</strong><small>Make the next round informative</small></span><span class="stage-arrow" aria-hidden="true">↗</span></button>
+          </div>
+          <div class="loop-detail" aria-live="polite" aria-atomic="true">
+            <div class="loop-detail-top"><span id="loop-status">Published methods</span><span id="loop-count">01 / 04</span></div>
+            <svg id="loop-diagram" viewBox="0 0 360 166" role="img" aria-labelledby="loop-svg-title">
+              <title id="loop-svg-title">Design, assess, test, and learn form a feedback cycle</title>
+              <defs><marker id="loop-arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L8 4 0 8" fill="none" stroke="#768aa2" stroke-width="1.2"/></marker></defs>
+              <g fill="none" stroke="#536b86" stroke-width="1.2" marker-end="url(#loop-arrow)"><path d="M123 39h109"/><path d="M286 59v44"/><path d="M236 126H125"/><path d="M74 104V62"/></g>
+              <g class="loop-node current" data-node="0"><rect x="24" y="20" width="99" height="39" rx="3"/><text x="73.5" y="44">DESIGN</text></g>
+              <g class="loop-node" data-node="1"><rect x="236" y="20" width="99" height="39" rx="3"/><text x="285.5" y="44">ASSESS</text></g>
+              <g class="loop-node" data-node="2"><rect x="236" y="107" width="99" height="39" rx="3"/><text x="285.5" y="131">TEST</text></g>
+              <g class="loop-node" data-node="3"><rect x="24" y="107" width="99" height="39" rx="3"/><text x="73.5" y="131">LEARN</text></g>
+              <text x="180" y="85" text-anchor="middle" class="loop-center">BIOLOGICAL QUESTION</text>
+            </svg>
+            <h3 id="loop-detail-title">Generate with a purpose.</h3>
+            <p id="loop-detail-copy">Start with a lead or a design brief. Use search and progressive generation to explore candidates under structural and property constraints.</p>
+            <p id="loop-detail-tools" class="loop-tools">Research building blocks: MolSearch · Chain-of-Generation · TRACE</p>
+          </div>
+        </div>
+        <div class="loop-board-bottom"><span aria-hidden="true">↻</span><p><strong>The goal: a more informative next round.</strong> Experimental feedback and adaptive learning are directions for joint research. This illustration does not run a molecular model.</p></div>
+      </div>
+      <div class="loop-principles"><p><span>01</span><strong>Preserve the intent.</strong><br>Keep essential structural constraints visible.</p><p><span>02</span><strong>Inspect the decisions.</strong><br>Make intermediate candidates and tool choices reviewable.</p><p><span>03</span><strong>Learn from outcomes.</strong><br>Use failures to refine hypotheses and next experiments.</p></div>
+    </div></section>
+
+    <section class="section wrap publications" id="publications" aria-labelledby="papers-heading">
+      <div class="section-top"><p class="eyebrow">03 / Selected publications</p><a class="quiet-link" href="https://scholar.google.com/citations?hl=en&amp;user=yQKlLTQAAAAJ" target="_blank" rel="noopener noreferrer">Complete record on Google Scholar <span aria-hidden="true">↗</span></a></div>
+      <h2 id="papers-heading">The research behind the ideas.</h2>
+      <ol class="publication-list">
+        <li><span class="publication-venue">KDD<span>2021</span></span><div><a href="https://doi.org/10.1145/3447548.3467186" target="_blank" rel="noopener noreferrer">MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive Learning from Molecular Graph <span aria-hidden="true">↗</span></a><p>Mengying Sun, Jing Xing, Huijun Wang, Bin Chen, and <strong>Jiayu Zhou</strong>.</p><span class="publication-note">Knowledge-aware molecular representation learning</span></div></li>
+        <li><span class="publication-venue">KDD<span>2022</span></span><div><a href="https://doi.org/10.1145/3534678.3542676" target="_blank" rel="noopener noreferrer">MolSearch: Search-based Multi-objective Molecular Generation and Property Optimization <span aria-hidden="true">↗</span></a><p>Mengying Sun, Jing Xing, Han Meng, Huijun Wang, Bin Chen, and <strong>Jiayu Zhou</strong>.</p><span class="publication-note distinction">Best Paper Award, KDD Health Day Track</span></div></li>
+        <li><span class="publication-venue">Cell<span>2026</span></span><div><a href="https://doi.org/10.1016/j.cell.2026.02.016" target="_blank" rel="noopener noreferrer">Deep-Learning-Based De Novo Discovery and Design of Therapeutics That Reverse Disease-Associated Transcriptional Phenotypes <span aria-hidden="true">↗</span></a><p>Jing Xing et al.</p><span class="publication-note distinction">Jiayu Zhou, co-corresponding author</span></div></li>
+        <li><span class="publication-venue">KDD<span>2026</span></span><div><a href="https://doi.org/10.1145/3770855.3819017" target="_blank" rel="noopener noreferrer">Molecular Lead Optimization via Agentic Tool Planning <span aria-hidden="true">↗</span></a><p>Lingxiao Li, Haobo Zhang, Ruohao Fan, Bin Chen, and <strong>Jiayu Zhou</strong>.</p><span class="publication-note">TRACE: trajectory-aware optimization</span></div></li>
+        <li><span class="publication-venue">NeurIPS<span>2026</span></span><div><a href="https://arxiv.org/abs/2511.11894" target="_blank" rel="noopener noreferrer">Chain-of-Generation: Progressive Latent Diffusion for Text-Guided Molecular Design <span aria-hidden="true">↗</span></a><p>Lingxiao Li, Haobo Zhang, Bin Chen, and <strong>Jiayu Zhou</strong>.</p><span class="publication-note">Accepted at NeurIPS 2026 · linked preprint: 2025</span></div></li>
+      </ol>
+    </section>
+
+    <section class="collaboration-section" id="collaborate" aria-labelledby="collaboration-heading"><div class="section wrap">
+      <div class="section-top"><p class="eyebrow">04 / Work with us</p><span class="section-note">Biology questions welcome.</span></div>
+      <h2 id="collaboration-heading">Start with a disease,<br>a lead, or a design goal.</h2>
+      <p class="section-lead">We welcome collaborations with experimental biologists, medicinal chemists, and drug discovery teams. A focused scientific question is a good place to begin.</p>
+      <div class="collaboration-paths">
+        <article><span class="path-index">A</span><h3>A disease signature</h3><p>Explore transcriptomics-guided compound prioritization and biological hypotheses.</p><p class="path-start"><strong>A useful starting point</strong><br>A disease model, expression data, or a measurable phenotype.</p></article>
+        <article><span class="path-index">B</span><h3>A lead to improve</h3><p>Study how to balance desired properties while preserving key structural features.</p><p class="path-start"><strong>A useful starting point</strong><br>Lead structures, critical motifs, and property priorities.</p></article>
+        <article><span class="path-index">C</span><h3>An experimental loop</h3><p>Co-design a workflow linking candidate proposals, assays, and informative next steps.</p><p class="path-start"><strong>A useful starting point</strong><br>An assay, practical constraints, and a question each round can answer.</p></article>
+      </div>
+      <div class="contact-block"><div><p class="contact-name">Jiayu Zhou</p><p>Professor · School of Information<br>University of Michigan · ILLIDAN Lab</p></div><div class="contact-actions"><a class="button primary" href="mailto:jiayuz@umich.edu?subject=AI%20for%20drug%20discovery%20collaboration">Discuss a collaboration <span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:jiayuz@umich.edu">jiayuz@umich.edu</a></div></div>
+    </div></section>
+
+    <section class="wrap acknowledgments" aria-labelledby="ack-heading">
+      <p class="eyebrow" id="ack-heading">Acknowledgments</p>
+      <p>This research is supported in part by the National Science Foundation under Grant IIS-2212174, the National Institute on Aging (NIA) under R01AG072449, and the National Institute of General Medical Sciences (NIGMS) under R01GM145700.</p>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><span>AI for Drug Discovery · October 2026</span><div><a href="https://jiayuzhou.github.io/">Personal webpage <span aria-hidden="true">↗</span></a><a href="/">ILLIDAN Lab home <span aria-hidden="true">↗</span></a><a href="#overview">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>
