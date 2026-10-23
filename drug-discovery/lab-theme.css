@@ -1,0 +1,67 @@
+/* Lab-site look: logo header, Skeleton-style menu, docs-header eyebrows, lab link colors.
+   Loaded after styles.css; remove this file and its <link> to return to the original design. */
+
+a {
+  color: #002e5e; }
+a:hover {
+  color: #f2c30f; }
+
+/* Header: centered lab logo, as on the main page */
+.site-header.lab-header {
+  display: block;
+  min-height: 0;
+  padding: 72px 0 40px;
+  text-align: center;
+  border-bottom: 0; }
+.lab-logo {
+  display: block;
+  width: 450px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; }
+
+/* Menu: match the main page's Skeleton navbar */
+.section-nav {
+  background: #f2f2f2;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  backdrop-filter: none; }
+.nav-inner {
+  gap: 35px;
+  min-height: 65px; }
+.nav-inner a {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #222; }
+.nav-inner a:last-child {
+  color: #222; }
+.nav-inner a:after {
+  display: none; }
+.nav-inner a.active,
+.nav-inner a:hover {
+  color: #173d74; }
+
+/* Section labels: match the main page's docs-header headings */
+.eyebrow,
+.section-top .eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #222; }
+.hero .eyebrow {
+  font-size: 12px; }
+
+@media (max-width: 700px) {
+  .site-header.lab-header {
+    padding: 40px 0 24px; }
+  .nav-inner {
+    gap: 0;
+    min-height: 54px; }
+  .nav-inner a {
+    font-size: 8px;
+    letter-spacing: .6px; }
+  .eyebrow,
+  .section-top .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.4px; } }
