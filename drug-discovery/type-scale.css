@@ -1,0 +1,118 @@
+/* Larger type scale for readability: body 15px, secondary 13px, nothing below 12px.
+   Loaded last so it overrides styles.css and lab-theme.css. */
+
+/* Body text */
+.hero-intro,
+.section-lead {
+  font-size: 15px; }
+.flagship-copy > p:not(.research-label):not(.credit),
+.research-item > p,
+.loop-detail p {
+  font-size: 15px;
+  line-height: 1.8; }
+.research-item > p {
+  max-width: 420px; }
+.research-connection,
+.signature-takeaway {
+  font-size: 14px; }
+
+/* Secondary text */
+.button,
+.text-link,
+.paper-link,
+.credit,
+.research-label,
+.venue,
+.method-year,
+.section-note,
+.quiet-link,
+.building-blocks-heading p,
+.research-item .use-case,
+.signature-name,
+.progressive-visual span,
+.loop-caption,
+.play-button,
+.stage-button small,
+.loop-detail p.loop-tools,
+.loop-board-bottom p,
+.loop-principles p,
+.loop-principles p > span,
+.publication-venue,
+.publication-venue span,
+.publication-list p,
+.acknowledgments p:not(.eyebrow) {
+  font-size: 13px; }
+.stage-button small {
+  line-height: 1.5; }
+
+/* Small print: 12px floor */
+.signature-heading,
+.signature-legend,
+.signature-figure figcaption,
+.hero-figure figcaption,
+.research-item .award,
+.publication-note,
+.loop-detail-top,
+.stage-index,
+.site-footer {
+  font-size: 12px; }
+
+/* Publications */
+.publication-list li {
+  grid-template-columns: 100px 1fr; }
+.publication-list a {
+  font-size: 16px;
+  line-height: 1.5; }
+
+@media (max-width: 700px) {
+  /* Menu: readable size, scrolls sideways instead of shrinking */
+  .nav-inner {
+    width: 100%;
+    padding-inline: 16px;
+    gap: 26px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none; }
+  .nav-inner::-webkit-scrollbar {
+    display: none; }
+  .nav-inner a {
+    font-size: 11px;
+    letter-spacing: 1.4px; }
+  .nav-inner a:last-child {
+    padding-right: 16px; }
+
+  .section-top .eyebrow,
+  .acknowledgments .eyebrow {
+    font-size: 12px; }
+  .publications .quiet-link {
+    font-size: 13px; }
+  .section-note,
+  .stage-button small,
+  .loop-board-bottom p,
+  .loop-principles p,
+  .publication-list p,
+  .publication-venue,
+  .publication-venue span,
+  .collaboration-paths p,
+  .acknowledgments p:not(.eyebrow) {
+    font-size: 13px; }
+  .research-item > p,
+  .flagship-copy > p:not(.research-label):not(.credit),
+  .loop-detail p {
+    font-size: 15px; }
+  .research-connection {
+    font-size: 14px; }
+  .signature-heading,
+  .signature-legend,
+  .signature-figure figcaption,
+  .hero-figure figcaption,
+  .hero .eyebrow,
+  .stage-index,
+  .loop-detail p.loop-tools,
+  .publication-note,
+  .site-footer {
+    font-size: 12px; }
+  .publication-list li {
+    grid-template-columns: 70px 1fr; }
+  .publication-list a {
+    font-size: 15px; } }
