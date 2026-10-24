@@ -18,8 +18,8 @@
     },
     {
       status: 'Future research direction', title: 'Make every outcome informative.',
-      copy: 'Use experimental outcomes to refine predictive models and choose the next candidates or measurements. The research goal is better decisions under limited experimental budgets.',
-      tools: 'Joint research opportunity: experimental feedback · adaptive learning · next-experiment selection'
+      copy: 'An AI agent uses experimental outcomes to refine its models and propose the next candidates or measurements, with scientists reviewing each step. The research goal is better decisions under limited experimental budgets.',
+      tools: 'Joint research opportunity: agentic planning · experimental feedback · next-experiment selection'
     }
   ];
   const buttons = [...document.querySelectorAll('[data-stage]')];
